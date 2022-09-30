@@ -39,3 +39,35 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  align-items: center;
+  background: linear-gradient(#121212, #212b46);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login {
+  border: solid 1px red;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.senha {
+  border: solid 1px red;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.button {
+  background-color: transparent;
+  border: solid 1px red;
+  border-radius: 8px;
+  color: whitesmoke;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
