@@ -48,3 +48,12 @@ body {
 .wallet {
   background-color: #1b1e23;
 }
+
+.wallett {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+select {
+  margin-left: 7px;
+}
