@@ -1,4 +1,5 @@
 // Coloque aqui suas actions
+// Coloque aqui suas actions
 export const LOGIN = 'LOGIN';
 export const MOEDA = 'MOEDA';
 
