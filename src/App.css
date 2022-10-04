@@ -40,13 +40,18 @@
   margin-left: 1050px;
 }
 
-body {
+/* body {
   background-color: #1b1e23;
   color: whitesmoke;
-}
+} */
 
 .wallet {
-  background-color: #1b1e23;
+  background-color: red;
+  height: 60px;
+}
+
+.walletText {
+  align-items: center;
 }
 
 .wallett {
@@ -67,4 +72,8 @@ div button {
   height: 17px;
   margin: 5px;
   width: 125px;
+}
+
+.despesa {
+  margin: 5px;
 }
