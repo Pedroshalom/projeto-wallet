@@ -156,12 +156,12 @@ class WalletForm extends Component {
         >
           Editar
         </button>
-        <button
+        {/* <button
           type="button"
           data-testid="delete-btn"
         >
           Excluir
-        </button>
+        </button> */}
       </div>
     );
   }
