@@ -12,7 +12,7 @@ class Header extends Component {
         const value = Number(askValue) * Number(cur.value);
         return acc + Number(value);
       }, 0);
-      return Number(sum).toFixed(2);
+      return Number(sum);
     }
     return 0;
   };
@@ -25,7 +25,7 @@ class Header extends Component {
         <p className="email" data-testid="email-field">{ email }</p>
         <div>
           <p>
-            <span data-testid="total-field">{expenses}</span>
+            <span data-testid="total-field">{expenses.toFixed(2)}</span>
           </p>
           <p data-testid="header-currency-field">BRL</p>
         </div>

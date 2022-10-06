@@ -149,19 +149,6 @@ class WalletForm extends Component {
         >
           Adicionar despesa
         </button>
-
-        <button
-          type="button"
-          data-testid="edit-btn"
-        >
-          Editar
-        </button>
-        {/* <button
-          type="button"
-          data-testid="delete-btn"
-        >
-          Excluir
-        </button> */}
       </div>
     );
   }

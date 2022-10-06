@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { deleta } from '../redux/actions/index';
 
 class Table extends Component {
   calculeValueOne = (ask) => {
@@ -11,6 +12,13 @@ class Table extends Component {
   calculeValoueTwo = (value, ask) => {
     const answer = Number(ask) * Number(value);
     return Number(answer).toFixed(2);
+  };
+
+  deletaTudo = (event, id) => {
+    event.preventDefault();
+    const { dispatch, expenses } = this.props;
+    const deleteExpense = expenses.filter((e) => e.id !== id);
+    dispatch(deleta(deleteExpense));
   };
 
   render() {
@@ -32,8 +40,8 @@ class Table extends Component {
         </thead>
         <tbody>
           {
-            expenses.map((event, index) => (
-              <tr key={ index }>
+            expenses.map((event) => (
+              <tr key={ event.id }>
                 <td>{event.description}</td>
                 <td>{event.tag}</td>
                 <td>{event.method}</td>
@@ -45,6 +53,15 @@ class Table extends Component {
                     .ask)}
                 </td>
                 <td>Real</td>
+                <td>
+                  <button
+                    type="button"
+                    data-testid="delete-btn"
+                    onClick={ (e) => this.deletaTudo(e, event.id) }
+                  >
+                    Excluir
+                  </button>
+                </td>
               </tr>
             ))
           }
@@ -60,6 +77,7 @@ const mapStateToProps = ({ wallet }) => ({
 
 Table.propTypes = {
   expenses: PropTypes.instanceOf(Array).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(Table);

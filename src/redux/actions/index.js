@@ -2,6 +2,7 @@
 export const LOGIN = 'LOGIN';
 export const MOEDA = 'MOEDA';
 export const SAVE = 'SAVE';
+export const DELETA = 'DELETA';
 const endpoint = 'https://economia.awesomeapi.com.br/json/all';
 
 export const loginAction = (email) => ({
@@ -19,11 +20,15 @@ export const actionExpense = (payload) => ({
   payload,
 });
 
+export const deleta = (payload) => ({
+  type: DELETA,
+  payload,
+});
+
 export const fetchApi = () => async (dispatch) => {
   try {
     const response = await fetch(endpoint);
     const data = await response.json();
-    // console.log(data);
     dispatch(actionMoeda(data));
   } catch (e) {
     return console.log(e);
