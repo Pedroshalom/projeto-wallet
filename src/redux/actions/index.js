@@ -3,6 +3,8 @@ export const LOGIN = 'LOGIN';
 export const MOEDA = 'MOEDA';
 export const SAVE = 'SAVE';
 export const DELETA = 'DELETA';
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const EDITOR_ACTIVE = 'EDITOR_ACTIVE';
 const endpoint = 'https://economia.awesomeapi.com.br/json/all';
 
 export const loginAction = (email) => ({
